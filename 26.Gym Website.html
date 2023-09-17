@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .header{
+            position:sticky;
+            top:0px;
+        }   ------> If we want to make the header sticked... */
+        body{
+            margin:0px;
+            padding:0px;
+            background:url('https://cdn.pixabay.com/photo/2016/11/22/22/25/abs-1850926__480.jpg');
+            background-repeat:no-repeat;
+            background-size: 100%;
+            color:white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .left{
+            /* border:2px solid red; */
+            display:inline-block;
+            position:absolute;
+            left:64px;
+            top:20px;
+        }
+        .mid{
+            /* border:2px solid rgb(0, 255, 8); */
+            display:block;
+            width:40%;
+            margin:20px auto;
+        }
+        .right{
+            /* border:2px solid rgb(23, 5, 178); */
+            display:inline-block;
+            position:absolute;
+            right:34px;
+            top:20px;
+        }
+        .navbar li {
+            display:inline-block;
+            font-size:20px;
+        }
+        .navbar li a{
+            color:white;
+            text-decoration:none;
+            padding:34px 5px;
+        }
+        .navbar li a:hover, .navbar li a.active{
+            text-decoration:underline;
+            color:grey;
+        }
+       .left img{
+        display:block;
+        width:50px;
+        margin: auto;
+        filter:invert(100%);
+        /* border:2px solid white; */
+       }
+       .left div{
+        text-align:center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* line-height:2px; */
+        font-size:13px;
+      }
+      .btn{
+        margin:0px 9px;
+        background-color:black;
+        color:white;
+        padding:4px 14px;
+        border:2px solid grey;
+        border-radius:10px;
+        font-size:20px;
+        cursor:pointer;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+         .btn:hover{
+            background-color:rgb(62, 50, 50);
+         }
+         .container{
+            border: 2px solid #f3ebeb;
+            margin: 100px;
+            padding: 75px;
+            width: 33%;
+            border-radius: 15px;
+
+        }
+        .container h1{
+            text-align:center;
+        }
+        .container label{
+            color:rgb(240, 240, 240);
+            display:block;
+            margin: 10px auto;
+         }
+         .form-group input{
+            border:2px solid black;
+            padding:8px;
+            width:250px;
+            text-align:center;
+         }
+         .submitbtn{
+            margin: 30px 83px;
+            display: block;
+            /* padding:4px 10px; */
+            width: 280px;
+         }
+         .container form{
+            width:60%;
+            display:block;
+            margin:auto;
+         }
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- left box for logo -->
+            <img src="https://cdn.pixabay.com/photo/2017/09/25/22/47/athletic-body-2787061__480.png" alt="Gym">
+            <div>Shivii Fitness</div>
+        </div>
+        <div class="mid">
+            <!-- mid box for navbar -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+            <!-- right div for buttons -->
+        </div>
+
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Indore</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                 <label for="name">Name: </label>
+                 <input type="text" name="myName" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age: </label>
+                <input type="text" name="myAge" id="age" placeholder="Enter Your Age">
+            </div> 
+            <div class="form-group">
+                <label for="gender">Gender: </label>
+                <input type="text" name="myGender" id="gender" placeholder="Enter Your Gender">
+            </div>
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" name="myEmail" id="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <label for="mobno">Mobile No. : </label>
+                <input type="text" name="mymob" id="mobno" placeholder="Enter Your Mobile No.">
+            </div>
+            
+        </form>
+        <button class="submitbtn btn" >Submit</button>
+    </div>
+</body>
+</html>
