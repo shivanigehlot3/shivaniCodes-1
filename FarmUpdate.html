@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmUpdate Website</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        color:black;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    #home{
+        display:flex;
+        margin:20px;
+    }
+    #home::before{
+        content: "";
+        background: url('bgFarm.jpg') no-repeat center center/cover;
+        width: 100%;
+        height: 80%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index:-1;
+        opacity:0.85;
+    }
+    #container header ul{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:1.5rem;
+    }
+    .head a{  
+        text-decoration:none;
+    }
+    .head a:hover{
+        font-size:1.8rem;
+    }
+    #nav{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        z-index:1;
+        margin: 15px 0px;
+        position:sticky;
+        top:0px;
+    }
+    #nav::before{
+        content: "";
+        background-color: rgb(4, 4, 4);
+        position:absolute;
+        height: 100%;
+        width:100%;
+        top:0px;
+        left:0px;
+        z-index:-1;
+        opacity:0.51;
+    }
+    #logo{
+        display:flex;
+        flex-direction: column;
+        margin:10px;
+    }
+    #logo img{
+        width:80px;
+        height: 50px;
+    }
+    #logo p{
+        font-size:1rem;
+    }
+    #nav ul li{
+        list-style:none;
+        margin:8px;
+        padding:6px;
+    }
+    #search{
+        font-size :1.5rem;
+        margin:15px;
+    }
+    #search label{
+        margin:6px;
+    }
+    #search input{
+        padding:5px;
+    }
+    #statusCrops{
+        /* background-color:white; */
+        border: 2px solid rgb(0, 0, 0);
+        text-align:center;
+        padding:10px;
+        margin: 30px;
+    }
+    #statusCrops h2{
+        margin:15px;
+    }
+    #products{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       /* background-color: antiquewhite; */
+       border-radius:5px;
+       text-align: center;
+       margin:180px 30px;
+       padding:20px;
+       gap:30px;
+    }
+    #products::before{
+        content: "";
+        background: url(food1.jpg) no-repeat center center/cover ;
+        height: 80%;
+        width:100%;
+        position:absolute;
+        /* top:0px;
+        left:0px; */
+        z-index:-1;
+        opacity:0.55;
+    }
+    .pro{
+        display:flex;
+        flex-direction: column;
+        border:1px solid rgb(32, 4, 18);
+        border-radius: 5px;
+        margin:10px;
+    }
+    .pro img{
+        margin:25px;
+        height: 100px;
+        width:100px;
+    }
+    #prod{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+    }
+    .btn{
+        width:100px;
+        height:30px;
+        margin:20px;
+        border:2px solid black;
+        border-radius:6px;
+        background-color: bisque;
+    }
+    .btn:hover{
+        background-color: rgb(245, 208, 164);
+        cursor:pointer;
+    }
+    #services{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        margin:10px;
+        padding:20px;
+        /* background-color: antiquewhite; */
+    }
+    #services::before{
+        content:"";
+        background:url(pizza.jpg) no-repeat center center/cover;
+        position:absolute;
+        height: 50%;
+        width:100%;
+        z-index:-1;
+        opacity:0.55;
+    }
+    .serve{
+        display:flex;
+        flex-direction: column;
+    }
+    .serve img{
+        height:100px;
+        width:100px;
+        margin:30px;
+    }
+    #serviceChild{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+    }
+    .split{
+        border-right:1px solid rgb(52, 51, 51);
+        height:150px;
+    }
+    #contactUs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        /* background-color: antiquewhite; */
+        margin: 150px 10px;
+        padding:2px;
+    }
+    #contactUs::before{
+        content: "";
+        background:url(
+        contact.jpg) no-repeat center center/cover;
+        position:absolute;
+        height:50%;
+        width:100%;
+        z-index:-1;
+        opacity: 0.15;
+    }
+    #contact{
+        display: flex;
+        gap:50px;
+        justify-content: center;
+    }
+    .con img{
+        height: 50px;
+        width: 50px;
+        margin:50px;
+        border:2px solid rgb(34, 1, 17);
+    }
+</style>
+
+<body>
+    <div id="container">
+    <header id="nav">
+        <div id="logo" >
+        <img src="farm logo.jpg" alt="Error Loading Image">
+        <p>FarmUpdate</p>
+    </div>
+    <div>
+        <ul>
+            <li class="head"><a href="#home">Home</a></li>
+            <li class="head"><a href="#products">Products</a></li>
+            <li class="head"><a href="#services">Services</a></li>
+            <li class="head"><a href="#email">Buy Online</a></li>
+            <li class="head"><a href="#contactUs">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="search">
+        <label for="searchHere">Search</label>
+        <input type="text" id="searchHere" placeholder="Search Here">
+    </div>
+    </header>
+    <section id="home">
+        <div id="statusCrops">
+        <h2>Status of Crops!</h2>
+            <img src="status.jpg" alt="Error">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi illum, fuga architecto quisquam nemo corrupti, fugit aliquam, corporis praesentium minima nobis. Rerum, alias odio omnis, nulla culpa similique, nostrum quasi mollitia est quos necessitatibus!</p>
+        </div>
+    </section>
+    <section id="products">
+            <h1>Products Available</h1>
+            <div id="prod">
+        <div class="pro"><img src="pro1.jpg" alt=""><button class="btn">Buy It</button></div>
+        <!-- <div class="split"></div> -->
+        <div class="pro"><img src="pro2.jpg" alt=""><button class="btn">Buy It</button></div>
+        <!-- <div class="split"></div> -->
+        <div class="pro"><img src="pro3.jpg" alt=""><button class="btn">Buy It</button></div>
+        <!-- <div class="split"></div> -->
+        <div class="pro"><img src="pro4.jpg" alt=""><button class="btn">Buy It</button></div>
+    </div>
+    </section>
+    <section id="services">
+        <h1>Our Services</h1>
+        <div id="serviceChild">
+        <div class="serve"><img src="dairy.jpg" alt=""><h3>Dairy Products</h3></div>
+        <div class="split"></div>
+        <div class="serve"><img src="Crops.jpg" alt=""><h3>Crops</h3></div>
+        <div class="split"></div>
+        <div class="serve"><img src="fruitveg.jpg" alt=""><h3>Fruits&Veggies</h3>
+        </div>
+        <div class="split"></div>
+        <div class="serve"><img src="cowdung.jpg" alt=""><h3>Cow Dung</h3></div>
+    </div>
+    </section>
+    <section id="contactUs">
+        <h1>Contact Us</h1>
+        <div id="contact">
+            <div class="con"><img src="call.png" alt=""></div>
+            <div class="con"><img src="email1.png" alt=""></div>
+            <div class="con"><img src="insta.jpg" alt=""></div>
+            <div class="con"><img src="facebook.jpg" alt=""></div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
